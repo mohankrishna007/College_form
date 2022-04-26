@@ -1,35 +1,35 @@
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  </head>
+</head>
 <body style="background-color: #fefefe;">
-  <div  style="margin: 0 auto; width: 80%;">
+<div  style="margin: 0 auto; width: 80%;">
     <h1>Form </h1>
     <form accept-charset="UTF-8" action="store.php" method="POST" enctype="multipart/form-data" target="_blank" id="myform">
-      <div class="form-group">
-        <label for="clgname">Name of the College</label>
-        <input type="text"  class="form-control" id="clgname" name="college_name" placeholder="Enter name of the college" required="required">
-      </div>
-      <div class="form-group">
-        <label for="clgcode" required="required">Code</label>
-        <input type="text"  class="form-control" id="clgcode" name="college_code" placeholder="Enter your college code">
-      </div>
-      <div class="form-group">
-        <label for="district">District</label>
-        <input type="text" class="form-control" id="district" name="district" placeholder="District">
-      </div>
-      <div class="form-group">
-        <label for="month_year">Month & Year</label>
-        <input type="date" name="month_year" id class="form-control" id="month_year">
-      </div>
-      <div class="form-group">
-        <label for="arg">Activities related to the Governance</label>
-        <textarea form="myform" id="arg" name="activities_related_governance" rows="4" style="width: 100%;"></textarea>
-      </div>
+        <div class="form-group">
+            <label for="clgname">Name of the College</label>
+            <input type="text"  class="form-control" id="clgname" name="college_name" placeholder="Enter name of the college" required="required">
+        </div>
+        <div class="form-group">
+            <label for="clgcode" required="required">Code</label>
+            <input type="text"  class="form-control" id="clgcode" name="college_code" placeholder="Enter your college code">
+        </div>
+        <div class="form-group">
+            <label for="district">District</label>
+            <input type="text" class="form-control" id="district" name="district" placeholder="District">
+        </div>
+        <div class="form-group">
+            <label for="month_year">Month & Year</label>
+            <input type="date" name="month_year" id class="form-control" id="month_year">
+        </div>
+        <div class="form-group">
+            <label for="arg">Activities related to the Governance</label>
+            <textarea form="myform" id="arg" name="activities_related_governance" rows="4" style="width: 100%;"></textarea>
+        </div>
 
         <div class="form-group">
             <label for="TWO">Training & Workshops Organized</label> <br>
@@ -58,159 +58,199 @@
             <button type="button" onclick="addFields('CCA')" style="float: right">&#43</button>
         </div>
 
-      <div class="form-group">
-        <label>NCC / NSS / Service Programs </label> <br>
-        <div style="margin-left: 20px;">
-          <label>NCC Programs: </label> <br>
-          <div style="margin-left: 20px">
-            <b> Title of the Activity </b><textarea form="myform" name="ncc_title" rows="2" style="width: 100%;"></textarea>
-            <b> Date </b><textarea form="myform" name="ncc_date" rows="2" style="width: 100%;"></textarea>
-            <b> Purpose </b><textarea form="myform" name="ncc_purpose" rows="2" style="width: 100%;"></textarea>
-            <b> Target Audience </b><textarea form="myform" name="ncc_participants" rows="2" style="width: 100%;"></textarea>
-            <b> Any other Details </b><textarea form="myform" name="ncc_any_other_details" rows="2" style="width: 100%;"></textarea>
-           </div>
-           <br>
-          <label>NSS Programs: </label> <br>
-          <div style="margin-left: 20px">
-            <b> Title of the Activity </b><textarea form="myform" name="nss_title" rows="2" style="width: 100%;"></textarea>
-            <b> Date </b><textarea form="myform" name="nss_date" rows="2" style="width: 100%;"></textarea>
-            <b> Purpose </b><textarea form="myform" name="nss_purpose" rows="2" style="width: 100%;"></textarea>
-            <b> Target Audience </b><textarea form="myform" name="nss_participants" rows="2" style="width: 100%;"></textarea>
-            <b> Any other Details </b><textarea form="myform" name="nss_any_other_details" rows="2" style="width: 100%;"></textarea>
-           </div>
-           <br>
-          <label>Service Activities : </label> <br>
-          <div style="margin-left: 20px">
-            <b> Title of the Activity </b><textarea form="myform" name="service_title" rows="2" style="width: 100%;"></textarea>
-            <b> Date </b><textarea form="myform" name="service_date" rows="2" style="width: 100%;"></textarea>
-            <b> Purpose </b><textarea form="myform" name="service_purpose" rows="2" style="width: 100%;"></textarea>
-            <b> Target Audience </b><textarea form="myform" name="service_participants" rows="2" style="width: 100%;"></textarea>
-            <b> Any other Details </b><textarea form="myform" name="service_any_other_details" rows="2" style="width: 100%;"></textarea>
-           </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label>Research Activities / Projects / Publications </label> <br>
-        <div style="margin-left: 20px;">
-          <label>Sponsored Research Project sanctioned in the Month of March 2022</label> <br>
-          <div style="margin-left: 20px">
-            <b> Title of the Project </b><textarea form="myform" name="research_activities_title" rows="2" style="width: 100%;"></textarea>
-            <b> Date of Sanction</b><textarea form="myform" name="research_activities_date" rows="2" style="width: 100%;"></textarea>
-            <b> Sponsored Organization </b><textarea form="myform" name="research_activities_sponser_organized" rows="2" style="width: 100%;"></textarea>
-            <b> Grant Received </b><textarea form="myform" name="research_activities_grant_received" rows="2" style="width: 100%;"></textarea>
-            <b> Any other Details </b><textarea form="myform" name="research_activities_any_other_details" rows="2" style="width: 100%;"></textarea>
-           </div>
-           <br>
-          <label>Research Projects Completed in the month of march 2022: </label> <br>
-          <div style="margin-left: 20px">
-            <b> Title of the Activity </b><textarea form="myform" name="research_projects_title" rows="2" style="width: 100%;"></textarea>
-            <b> Date </b><textarea form="myform" name="research_projects_date" rows="2" style="width: 100%;"></textarea>
-            <b> Purpose </b><textarea form="myform" name="research_projects_sponser_organized" rows="2" style="width: 100%;"></textarea>
-            <b> Target Audience </b><textarea form="myform" name="research_projects_grant_received" rows="2" style="width: 100%;"></textarea>
-            <b> Any other Details </b><textarea form="myform" name="research_projects_any_other_details" rows="2" style="width: 100%;"></textarea>
-           </div>
-           <br>
-          <label>Number of Journals: </label> <br>
-          <div style="margin-left: 20px">
-            <b> Name of the Author(s) </b><textarea form="myform" name="journal_author" rows="2" style="width: 100%;"></textarea>
-            <b> Title of the paper </b><textarea form="myform" name="journal_title" rows="2" style="width: 100%;"></textarea>
-            <b> Name of the Journal </b><textarea form="myform" name="journal_name" rows="2" style="width: 100%;"></textarea>
-            <b> Link to access Publication </b><textarea form="myform" name="journal_link" rows="2" style="width: 100%;"></textarea>
-           </div>
-           <br>
-          <label>Number of Conferences: </label> <br>
-          <div style="margin-left: 20px">
-            <b> Name of the Author(s) </b><textarea form="myform" name="conference_author" rows="2" style="width: 100%;"></textarea>
-            <b> Title of the Paper </b><textarea form="myform" name="conference_title" rows="2" style="width: 100%;"></textarea>
-            <b> Details of Conference </b><textarea form="myform" name="conference_details" rows="2" style="width: 100%;"></textarea>
-            <b> Link to access Publication </b><textarea form="myform" name="conference_link" rows="2" style="width: 100%;"></textarea>
-           </div>
-           <br>
-          <label>Number of Books/ Book Chapters: </label> <br>
-          <div style="margin-left: 20px">
-            <b> Authors </b><textarea form="myform" name="book_author" rows="2" style="width: 100%;"></textarea>
-            <b> Title of the Book / Book Chapter </b><textarea form="myform" name="book_title" rows="2" style="width: 100%;"></textarea>
-            <b> Name of the Publisher </b><textarea form="myform" name="book_publisher" rows="2" style="width: 100%;"></textarea>
-            <b> Other Details </b><textarea form="myform" name="book_details" rows="2" style="width: 100%;"></textarea>
-            <b> Link to access Publication </b><textarea form="myform" name="book_link" rows="2" style="width: 100%;"></textarea>
-           </div>
-           <br>
-          <label>Number of patents: </label> <br>
-          <div style="margin-left: 20px">
-            <b> Author </b><textarea form="myform" name="patent_author" rows="2" style="width: 100%;"></textarea>
-            <b> Title </b><textarea form="myform" name="patent_title" rows="2" style="width: 100%;"></textarea>
-            <b> Application Number </b><textarea form="myform" name="patent_application_number" rows="2" style="width: 100%;"></textarea>
-            <b> Link to access Publication </b><textarea form="myform" name="patent_link" rows="2" style="width: 100%;"></textarea>
-           </div>
-        </div>
-      </div>
-
         <div class="form-group">
-            <label for="inputAddress">Student Support Programs</label> <br>
-            <div style="margin-left: 20px">
-                <b> Internships</b><textarea form="myform" name="student_support_interships" rows="2" style="width: 100%;"></textarea>
-                <b> placements </b><textarea form="myform" name="student_support_placements" rows="2" style="width: 100%;"></textarea>
-                <b> Any other Details </b><textarea form="myform" name="student_support_any_other_details" rows="2" style="width: 100%;"></textarea>
+            <label>NCC / NSS / Service Programs </label> <br>
+            <div style="margin-left: 20px;">
+                <label>NCC Programs: </label> <br>
+                <div class="wrapper_NCCP">
+                    <div style="margin-left: 20px" id="NCCP">
+                        <b> Title of the Activity </b><textarea form="myform" name="ncc_title[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Date </b><textarea form="myform" name="ncc_date[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Purpose </b><textarea form="myform" name="ncc_purpose[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Target Audience </b><textarea form="myform" name="ncc_participants[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Any other Details </b><textarea form="myform" name="ncc_any_other_details[]" rows="2" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="addFields('NCCP')" style="float: right">&#43</button>
+                <br>
+                <label>NSS Programs: </label> <br>
+                <div class="wrapper_NSSP">
+                    <div style="margin-left: 20px" id="NSSP" >
+                        <b> Title of the Activity </b><textarea form="myform" name="nss_title[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Date </b><textarea form="myform" name="nss_date[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Purpose </b><textarea form="myform" name="nss_purpose[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Target Audience </b><textarea form="myform" name="nss_participants[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Any other Details </b><textarea form="myform" name="nss_any_other_details[]" rows="2" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="addFields('NSSP')" style="float: right">&#43</button>
+
+                <br>
+                <label>Service Activities : </label> <br>
+                <div class="wrapper_SA">
+                    <div style="margin-left: 20px" id="SA">
+                        <b> Title of the Activity </b><textarea form="myform" name="service_title[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Date </b><textarea form="myform" name="service_date[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Purpose </b><textarea form="myform" name="service_purpose[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Target Audience </b><textarea form="myform" name="service_participants[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Any other Details </b><textarea form="myform" name="service_any_other_details[]" rows="2" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="addFields('SA')" style="float: right">&#43</button>
             </div>
         </div>
 
-      <div class="form-group">
-        <label for="inputAddress">Extension & Community Oriented Activities</label> <br>
-        <div style="margin-left: 20px">
-         <b> Title/Type of the Extension & Community Oriented Activity </b><textarea form="myform" name="extension_community_title" rows="2" style="width: 100%;"></textarea>
-         <b> Date </b><textarea form="myform" name="extension_community_date" rows="2" style="width: 100%;"></textarea>
-         <b> Target Audience </b><textarea form="myform" name="extension_community_participants" rows="2" style="width: 100%;"></textarea>
-         <b> Any other Details </b><textarea form="myform" name="extension_community_any_other_details" rows="2" style="width: 100%;"></textarea>
+        <div class="form-group">
+            <label>Research Activities / Projects / Publications </label> <br>
+            <div style="margin-left: 20px;">
+                <label>Sponsored Research Project sanctioned in the Month of March 2022</label> <br>
+                <div class="wrapper_SRP">
+                    <div style="margin-left: 20px" id="SRP">
+                        <b> Title of the Project </b><textarea form="myform" name="research_activities_title[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Date of Sanction</b><textarea form="myform" name="research_activities_date[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Sponsored Organization </b><textarea form="myform" name="research_activities_sponser_organized[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Grant Received </b><textarea form="myform" name="research_activities_grant_received[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Any other Details </b><textarea form="myform" name="research_activities_any_other_details[]" rows="2" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="addFields('SRP')" style="float: right">&#43</button>
+                <br>
+                <label>Research Projects Completed in the month of march 2022: </label> <br>
+                <div class="wrapper_RPC">
+                    <div style="margin-left: 20px" id="RPC">
+                        <b> Title of the Activity </b><textarea form="myform" name="research_projects_title[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Date </b><textarea form="myform" name="research_projects_date[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Purpose </b><textarea form="myform" name="research_projects_sponser_organized[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Target Audience </b><textarea form="myform" name="research_projects_grant_received[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Any other Details </b><textarea form="myform" name="research_projects_any_other_details[]" rows="2" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="addFields('RPC')" style="float: right">&#43</button>
+                <br>
+                <label>Number of Journals: </label> <br>
+                <div class="wrapper_NOJ">
+                    <div style="margin-left: 20px" id="NOJ">
+                        <b> Name of the Author(s) </b><textarea form="myform" name="journal_author[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Title of the paper </b><textarea form="myform" name="journal_title[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Name of the Journal </b><textarea form="myform" name="journal_name[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Link to access Publication </b><textarea form="myform" name="journal_link[]" rows="2" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="addFields('NOJ')" style="float: right">&#43</button>
+                <br>
+                <label>Number of Conferences: </label> <br>
+                <div class="wrapper_NOC">
+                    <div style="margin-left: 20px" id="NOC">
+                        <b> Name of the Author(s) </b><textarea form="myform" name="conference_author[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Title of the Paper </b><textarea form="myform" name="conference_title[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Details of Conference </b><textarea form="myform" name="conference_details[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Link to access Publication </b><textarea form="myform" name="conference_link[]" rows="2" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="addFields('NOC')" style="float: right">&#43</button>
+                <br>
+                <label>Number of Books/ Book Chapters: </label> <br>
+                <div class="wrapper_NOB">
+                    <div style="margin-left: 20px" id="NOB">
+                        <b> Authors </b><textarea form="myform" name="book_author[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Title of the Book / Book Chapter </b><textarea form="myform" name="book_title[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Name of the Publisher </b><textarea form="myform" name="book_publisher[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Other Details </b><textarea form="myform" name="book_details[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Link to access Publication </b><textarea form="myform" name="book_link[]" rows="2" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="addFields('NOB')" style="float: right">&#43</button>
+                <br>
+                <label>Number of patents: </label> <br>
+                <div class="wrapper_NOP">
+                    <div style="margin-left: 20px" id="NOP">
+                        <b> Author </b><textarea form="myform" name="patent_author[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Title </b><textarea form="myform" name="patent_title[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Application Number </b><textarea form="myform" name="patent_application_number[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Link to access Publication </b><textarea form="myform" name="patent_link[]" rows="2" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="addFields('NOP')" style="float: right">&#43</button>
+            </div>
         </div>
-      </div>
 
-      <div class="form-group">
-        <label for="inputAddress">Awards & Recognitions</label> <br>
-        <div style="margin-left: 20px">
-         <b> Title of the Award/ Recognition </b><textarea form="myform" name="awards_recognitions_title" rows="2" style="width: 100%;"></textarea>
-         <b> State/ National/ International </b><textarea form="myform" name="awards_recognitions_level" rows="2" style="width: 100%;"></textarea>
-         <b> Organization </b><textarea form="myform" name="awards_recognitions_oraganization" rows="2" style="width: 100%;"></textarea>
-         <b> Date of Award </b><textarea form="myform" name="awards_recognitions_date" rows="2" style="width: 100%;"></textarea>
-         <b> Any other Details </b><textarea form="myform" name="awards_recognitions_any_other_details" rows="2" style="width: 100%;"></textarea>
+        <div class="form-group">
+            <label>Student Support Programs</label> <br>
+            <div class="wrapper_SSP">
+                <div style="margin-left: 20px" id="SSP">
+                    <b> Internships</b><textarea form="myform" name="student_support_interships[]" rows="2" style="width: 100%;"></textarea>
+                    <b> placements </b><textarea form="myform" name="student_support_placements[]" rows="2" style="width: 100%;"></textarea>
+                    <b> Any other Details </b><textarea form="myform" name="student_support_any_other_details[]" rows="2" style="width: 100%;"></textarea>
+                </div>
+            </div>
+            <button type="button" onclick="addFields('SSP')" style="float: right">&#43</button>
         </div>
-      </div>
 
-      <div class="form-group">
-        <label for="inputAddress">Projects initiated or Completed</label> <br>
-        <div style="margin-left: 20px">
-         <b> Title of the Project </b><textarea form="myform" name="projects_initiated_title" rows="2" style="width: 100%;"></textarea>
-         <b> State/ National/ International </b><textarea form="myform" name="projects_initiated_level" rows="2" style="width: 100%;"></textarea>
-         <b> Any other Details </b><textarea form="myform" name="projects_initiated_any_other_details" rows="2" style="width: 100%;"></textarea>
+        <div class="form-group">
+            <label>Extension & Community Oriented Activities</label> <br>
+            <div class="wrapper_ECO">
+                <div style="margin-left: 20px" id="ECO">
+                    <b> Title/Type of the Extension & Community Oriented Activity </b><textarea form="myform" name="extension_community_title[]" rows="2" style="width: 100%;"></textarea>
+                    <b> Date </b><textarea form="myform" name="extension_community_date[]" rows="2" style="width: 100%;"></textarea>
+                    <b> Target Audience </b><textarea form="myform" name="extension_community_participants[]" rows="2" style="width: 100%;"></textarea>
+                    <b> Any other Details </b><textarea form="myform" name="extension_community_any_other_details[]" rows="2" style="width: 100%;"></textarea>
+                </div>
+            </div>
+            <button type="button" onclick="addFields('ECO')" style="float: right">&#43</button>
         </div>
-      </div>
 
-      <div class="form-group">
-        <label for="inputAddress">Any Other Remarks / Suggestions</label>
-        <textarea form="myform" name="any_other_remarks" rows="4" style="width: 100%;"></textarea>
-      </div>
+        <div class="form-group">
+            <label>Awards & Recognitions</label> <br>
+            <div class="wrapper_AR">
+                <div style="margin-left: 20px">
+                    <b> Title of the Award/ Recognition </b><textarea form="myform" name="awards_recognitions_title[]" rows="2" style="width: 100%;"></textarea>
+                    <b> State/ National/ International </b><textarea form="myform" name="awards_recognitions_level[]" rows="2" style="width: 100%;"></textarea>
+                    <b> Organization </b><textarea form="myform" name="awards_recognitions_oraganization[]" rows="2" style="width: 100%;"></textarea>
+                    <b> Date of Award </b><textarea form="myform" name="awards_recognitions_date[]" rows="2" style="width: 100%;"></textarea>
+                    <b> Any other Details </b><textarea form="myform" name="awards_recognitions_any_other_details[]" rows="2" style="width: 100%;"></textarea>
+                </div>
+            </div>
+            <button type="button" onclick="addFields('AR')" style="float: right">&#43</button>
+        </div>
+
+        <div class="form-group">
+            <label>Projects initiated or Completed</label> <br>
+            <div class="wrapper_PI">
+                <div style="margin-left: 20px">
+                    <b> Title of the Project </b><textarea form="myform" name="projects_initiated_title[]" rows="2" style="width: 100%;"></textarea>
+                    <b> State/ National/ International </b><textarea form="myform" name="projects_initiated_level[]" rows="2" style="width: 100%;"></textarea>
+                    <b> Any other Details </b><textarea form="myform" name="projects_initiated_any_other_details[]" rows="2" style="width: 100%;"></textarea>
+                </div>
+            </div>
+            <button type="button" onclick="addFields('PI')" style="float: right">&#43</button>
+        </div>
+
+        <div class="form-group">
+            <label>Any Other Remarks / Suggestions</label>
+            <textarea form="myform" name="any_other_remarks" rows="4" style="width: 100%;"></textarea>
+        </div>
 
         <br><br>
         <center>
-          <input type="submit" name="submit" class="btn btn-primary"></input>
+            <input type="submit" name="submit" class="btn btn-primary"></input>
         </center>
     </form>
-  </div>
+</div>
 </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-      function addFields(name) {
-          var wrapper = $('.wrapper_' + name);
-          var add_button = document.getElementsByClassName("add_field_button_"+name);
-          var clone = $("#"+name).clone().append('<a href="#" class="remove_field">Remove</a>');
-          var x = 1;
-          if (x == 1) {
-              wrapper.append(clone.clone());
-              x++;
-          }
-          $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
-              e.preventDefault(); $(this).parent('div').remove(); x--;
-          })
-      }
-  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function addFields(name) {
+        var wrapper = $('.wrapper_' + name);
+        var add_button = document.getElementsByClassName("add_field_button_"+name);
+        var clone = $("#"+name).clone().append('<a href="#" class="remove_field">Remove</a>');
+        var x = 1;
+        if (x == 1) {
+            wrapper.append(clone.clone());
+            x++;
+        }
+        $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+            e.preventDefault(); $(this).parent('div').remove(); x--;
+        })
+    }
+</script>
 </html>
