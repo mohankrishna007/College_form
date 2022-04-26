@@ -1,0 +1,209 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+<body style="background-color: #fefefe;">
+  <div  style="margin: 0 auto; width: 80%;">
+    <h1>Form </h1>
+    <form accept-charset="UTF-8" action="store.php" method="POST" enctype="multipart/form-data" target="_blank" id="myform">
+      <div class="form-group">
+        <label for="clgname">Name of the College</label>
+        <input type="text"  class="form-control" id="clgname" name="clgname" placeholder="Enter name of the college" required="required">
+      </div>
+      <div class="form-group">
+        <label for="clgcode" required="required">Code</label>
+        <input type="text"  class="form-control" id="clgcode" name="clgcode" placeholder="Enter your college code">
+      </div>
+      <div class="form-group">
+        <label for="district">District</label>
+        <input type="text" class="form-control" id="district" name="district" placeholder="District">
+      </div>
+      <div class="form-group">
+        <label for="monthyear">Month & Year</label>
+        <input type="date" name="monthyear" class="form-control" id="monthyear">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Introductory Remarks </label>
+        <textarea form="myform" name="ir" rows="4" style="width: 100%;"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Activities related to the Governance</label>
+        <textarea form="myform" name="arg" rows="4" style="width: 100%;"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="inputAddress">Important Conferences / Seminars / Meetings Organized</label> <br>
+        <div style="margin-left: 20px">
+         <b> Title of the Conferences </b><textarea form="myform" name="icsmtitle" rows="2" style="width: 100%;"></textarea> 
+         <b> Date </b><textarea form="myform" name="icsmdate" rows="2" style="width: 100%;"></textarea> 
+         <b> Purpose </b><textarea form="myform" name="icsmpurpose" rows="2" style="width: 100%;"></textarea>
+         <b> Participants / Target Audience </b><textarea form="myform" name="icsmpart" rows="2" style="width: 100%;"></textarea>
+         <b> Any other Details </b><textarea form="myform" name="icsmaod" rows="2" style="width: 100%;"></textarea>      
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputAddress">Training & Workshops Organized</label> <br>
+        <div style="margin-left: 20px">
+         <b> Title of the Training Program / Workshop/ FDP </b><textarea form="myform" name="twotitle" rows="2" style="width: 100%;"></textarea> 
+         <b> Date </b><textarea form="myform" name="twodate" rows="2" style="width: 100%;"></textarea> 
+         <b> Purpose </b><textarea form="myform" name="twopurpose" rows="2" style="width: 100%;"></textarea>
+         <b> Target Audience </b><textarea form="myform" name="twopart" rows="2" style="width: 100%;"></textarea>
+         <b> Any other Details </b><textarea form="myform" name="twoaod" rows="2" style="width: 100%;"></textarea>      
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputAddress">Co-curricular Activities</label> <br>
+        <div style="margin-left: 20px">
+         <b> Title of the Activity </b><textarea form="myform" name="ccatitle" rows="2" style="width: 100%;"></textarea> 
+         <b> Date </b><textarea form="myform" name="ccadate" rows="2" style="width: 100%;"></textarea> 
+         <b> Purpose </b><textarea form="myform" name="ccapurpose" rows="2" style="width: 100%;"></textarea>
+         <b> Target Audience </b><textarea form="myform" name="ccapart" rows="2" style="width: 100%;"></textarea>
+         <b> Any other Details </b><textarea form="myform" name="ccaaod" rows="2" style="width: 100%;"></textarea>      
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>NCC / NSS / Service Programs </label> <br>
+        <div style="margin-left: 20px;">
+          <label>NCC Programs: </label> <br>
+          <div style="margin-left: 20px">
+            <b> Title of the Activity </b><textarea form="myform" name="ncctitle" rows="2" style="width: 100%;"></textarea> 
+            <b> Date </b><textarea form="myform" name="nccdate" rows="2" style="width: 100%;"></textarea> 
+            <b> Purpose </b><textarea form="myform" name="nccpurpose" rows="2" style="width: 100%;"></textarea>
+            <b> Target Audience </b><textarea form="myform" name="nccpart" rows="2" style="width: 100%;"></textarea>
+            <b> Any other Details </b><textarea form="myform" name="nccaod" rows="2" style="width: 100%;"></textarea>      
+           </div>
+           <br>
+          <label>NSS Programs: </label> <br>
+          <div style="margin-left: 20px">
+            <b> Title of the Activity </b><textarea form="myform" name="nsstitle" rows="2" style="width: 100%;"></textarea> 
+            <b> Date </b><textarea form="myform" name="nssdate" rows="2" style="width: 100%;"></textarea> 
+            <b> Purpose </b><textarea form="myform" name="nsspurpose" rows="2" style="width: 100%;"></textarea>
+            <b> Target Audience </b><textarea form="myform" name="nsspart" rows="2" style="width: 100%;"></textarea>
+            <b> Any other Details </b><textarea form="myform" name="nssaod" rows="2" style="width: 100%;"></textarea>      
+           </div>
+           <br>
+          <label>Service Activities : </label> <br>
+          <div style="margin-left: 20px">
+            <b> Title of the Activity </b><textarea form="myform" name="servicetitle" rows="2" style="width: 100%;"></textarea> 
+            <b> Date </b><textarea form="myform" name="servicedate" rows="2" style="width: 100%;"></textarea> 
+            <b> Purpose </b><textarea form="myform" name="servicepurpose" rows="2" style="width: 100%;"></textarea>
+            <b> Target Audience </b><textarea form="myform" name="servicepart" rows="2" style="width: 100%;"></textarea>
+            <b> Any other Details </b><textarea form="myform" name="serviceaod" rows="2" style="width: 100%;"></textarea>      
+           </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Research Activities / Projects / Publications </label> <br>
+        <div style="margin-left: 20px;">
+          <label>Sponsored Research Project sanctioned in the Month of March 2022</label> <br>
+          <div style="margin-left: 20px">
+            <b> Title of the Project </b><textarea form="myform" name="srptitle" rows="2" style="width: 100%;"></textarea> 
+            <b> Date of Sanction</b><textarea form="myform" name="srpdate" rows="2" style="width: 100%;"></textarea> 
+            <b> Sponsored Organization </b><textarea form="myform" name="srpsponser" rows="2" style="width: 100%;"></textarea>
+            <b> Grant Received </b><textarea form="myform" name="srpgr" rows="2" style="width: 100%;"></textarea>
+            <b> Any other Details </b><textarea form="myform" name="srpaod" rows="2" style="width: 100%;"></textarea>      
+           </div>
+           <br>
+          <label>Research Projects Completed in the month of march 2022: </label> <br>
+          <div style="margin-left: 20px">
+            <b> Title of the Activity </b><textarea form="myform" name="rpctitle" rows="2" style="width: 100%;"></textarea> 
+            <b> Date </b><textarea form="myform" name="rpcdate" rows="2" style="width: 100%;"></textarea> 
+            <b> Purpose </b><textarea form="myform" name="rpcsponser" rows="2" style="width: 100%;"></textarea>
+            <b> Target Audience </b><textarea form="myform" name="rpcgr" rows="2" style="width: 100%;"></textarea>
+            <b> Any other Details </b><textarea form="myform" name="rpcaod" rows="2" style="width: 100%;"></textarea>      
+           </div>
+           <br>
+          <label>Number of Journals: </label> <br>
+          <div style="margin-left: 20px">
+            <b> Name of the Author(s) </b><textarea form="myform" name="njauthor" rows="2" style="width: 100%;"></textarea> 
+            <b> Title of the paper </b><textarea form="myform" name="njtitle" rows="2" style="width: 100%;"></textarea> 
+            <b> Name of the Journal </b><textarea form="myform" name="njname" rows="2" style="width: 100%;"></textarea>
+            <b> Link to access Publication </b><textarea form="myform" name="njlap" rows="2" style="width: 100%;"></textarea>
+           </div>
+           <br>
+          <label>Number of Conferences: </label> <br>
+          <div style="margin-left: 20px">
+            <b> Name of the Author(s) </b><textarea form="myform" name="ncauthor" rows="2" style="width: 100%;"></textarea> 
+            <b> Title of the Paper </b><textarea form="myform" name="nctitle" rows="2" style="width: 100%;"></textarea> 
+            <b> Details of Conference </b><textarea form="myform" name="ncdetails" rows="2" style="width: 100%;"></textarea>
+            <b> Link to access Publication </b><textarea form="myform" name="nclap" rows="2" style="width: 100%;"></textarea>
+           </div>
+           <br>
+          <label>Number of Books/ Book Chapters: </label> <br>
+          <div style="margin-left: 20px">
+            <b> Authors </b><textarea form="myform" name="nbauthor" rows="2" style="width: 100%;"></textarea> 
+            <b> Title of the Book / Book Chapter </b><textarea form="myform" name="nbtitle" rows="2" style="width: 100%;"></textarea> 
+            <b> Name of the Publisher </b><textarea form="myform" name="nbname" rows="2" style="width: 100%;"></textarea>
+            <b> Other Details </b><textarea form="myform" name="nbdetails" rows="2" style="width: 100%;"></textarea>
+            <b> Link to access Publication </b><textarea form="myform" name="nblap" rows="2" style="width: 100%;"></textarea>      
+           </div>
+           <br>
+          <label>Number of patents: </label> <br>
+          <div style="margin-left: 20px">
+            <b> Author </b><textarea form="myform" name="npauthor" rows="2" style="width: 100%;"></textarea> 
+            <b> Title </b><textarea form="myform" name="nptitle" rows="2" style="width: 100%;"></textarea> 
+            <b> Application Number </b><textarea form="myform" name="npapplication" rows="2" style="width: 100%;"></textarea>
+            <b> Link to access Publication </b><textarea form="myform" name="nplap" rows="2" style="width: 100%;"></textarea>
+           </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputAddress">Student Support Programs</label>
+        <textarea form="myform" name="ssp" rows="4" style="width: 100%;"></textarea>      
+      </div>
+
+
+      <div class="form-group">
+        <label for="inputAddress">Extension & Community Oriented Activities</label> <br>
+        <div style="margin-left: 20px">
+         <b> Title/Type of the Extension & Community Oriented Activity </b><textarea form="myform" name="ecoatitle" rows="2" style="width: 100%;"></textarea> 
+         <b> Date </b><textarea form="myform" name="ecoadate" rows="2" style="width: 100%;"></textarea> 
+         <b> Target Audience </b><textarea form="myform" name="ecoapart" rows="2" style="width: 100%;"></textarea>
+         <b> Any other Details </b><textarea form="myform" name="ecoaaod" rows="2" style="width: 100%;"></textarea>      
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputAddress">Awards & Recognitions</label> <br>
+        <div style="margin-left: 20px">
+         <b> Title of the Award/ Recognition </b><textarea form="myform" name="artitle" rows="2" style="width: 100%;"></textarea> 
+         <b> State/ National/ International </b><textarea form="myform" name="arsni" rows="2" style="width: 100%;"></textarea> 
+         <b> Organization </b><textarea form="myform" name="arorg" rows="2" style="width: 100%;"></textarea>
+         <b> Date of Award </b><textarea form="myform" name="ardate" rows="2" style="width: 100%;"></textarea>  
+         <b> Any other Details </b><textarea form="myform" name="araod" rows="2" style="width: 100%;"></textarea>      
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputAddress">Projects initiated or Completed</label> <br>
+        <div style="margin-left: 20px">
+         <b> Title of the Project </b><textarea form="myform" name="pictitle" rows="2" style="width: 100%;"></textarea> 
+         <b> State/ National/ International </b><textarea form="myform" name="picsni" rows="2" style="width: 100%;"></textarea> 
+         <b> Any other Details </b><textarea form="myform" name="picaod" rows="2" style="width: 100%;"></textarea>      
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputAddress">Any Other Remarks / Suggestions</label>
+        <textarea form="myform" name="aors" rows="4" style="width: 100%;"></textarea>     
+      </div>
+
+        <br><br>
+        <center>
+          <input type="submit" name="submit" class="btn btn-primary"></input>
+        </center>
+    </form>
+  </div>
+</body>
+
+</html>

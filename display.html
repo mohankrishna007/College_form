@@ -1,0 +1,378 @@
+<!-- <?php
+include('config.php');
+?> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    table {
+      table-layout: fixed;
+      word-break: break-all;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content" style="margin:20px; border: 1px solid black">
+    <div class="nav" style="float: right; margin: 10px">
+      <button id="prev_btn" class="button">&#60;</button>
+      <button id="next_btn" class="button">&#62;</button>
+      <i class="fa fa-print" style="font-size:21px; margin: 10px; cursor: pointer;" onclick="window.print()"></i>
+    </div>
+    <div style="margin: 0 auto; width: 90%;">
+      <h3> College Data </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Name of the College</th>
+            <th>CODE</th>
+            <th>District</th>
+            <th>Introductory <br> Remarks</th>
+            <th>Activities related <br> Governance</th>
+            <th>Students support <br> practices</th>
+            <th>Any other Remarks<br> Suggestions</th>
+          </tr>
+        </thead>
+        <tbody id="clg_data">
+
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+
+    <div style="margin: 0 auto; width: 90%;">
+      <h3> Important Conferences / Seminars and Meetings Organized </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th style="width: 250px;">Title of Conferences/ <br> Seminars/ Meeting</th>
+            <th>Date</th>
+            <th>Purpose</th>
+            <th>Participants /Target Audience</th>
+            <th>Any other details</th>
+          </tr>
+        </thead>
+        <tbody id="icsm">
+
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+
+    <div style="margin: 0 auto; width: 90%;">
+      <h3> Training & Workshops Organized </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Title of Training program/ <br> Program/ Workshop/ FDP</th>
+            <th>Date</th>
+            <th>Purpose</th>
+            <th>Target Audience</th>
+            <th>Any other details</th>
+          </tr>
+        </thead>
+        <tbody id="two">
+
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+
+    <div style="margin: 0 auto; width: 90%;">
+      <h3> Co-curricular Activities </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Name of the Activity</th>
+            <th>Date</th>
+            <th>Purpose</th>
+            <th>Target Audience</th>
+            <th>Any other details</th>
+          </tr>
+        </thead>
+        <tbody id="cca">
+
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+
+    <div style="margin: 0 auto; width: 90%;">
+      <h3> NCC Programs </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Name of the Activity</th>
+            <th>Date</th>
+            <th>Purpose</th>
+            <th>Target Audience</th>
+            <th>Any other details</th>
+          </tr>
+        </thead>
+        <tbody id="ncc">
+
+        </tbody>
+      </table>
+
+      <h3> NSS Programs </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Name of the Activity</th>
+            <th>Date</th>
+            <th>Purpose</th>
+            <th>Target Audience</th>
+            <th>Any other details</th>
+          </tr>
+        </thead>
+        <tbody id="nss">
+
+        </tbody>
+      </table>
+
+      <h3> Service Programs </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Name of the Activity</th>
+            <th>Date</th>
+            <th>Purpose</th>
+            <th>Target Audience</th>
+            <th>Any other details</th>
+          </tr>
+        </thead>
+        <tbody id="service">
+
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+
+    <div style="margin: 0 auto; width: 90%;">
+      <h3> Sponsored Research Project sanctioned in the Month of March 2022 </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Title </th>
+            <th>Date</th>
+            <th>Sponsored</th>
+            <th>Grant Received</th>
+            <th>Any other details</th>
+          </tr>
+        </thead>
+        <tbody id="srp">
+
+        </tbody>
+      </table>
+
+      <h3>Research Projects Completed in the month of march 2022: </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Title of project</th>
+            <th>Date</th>
+            <th>Sponsored</th>
+            <th>Grant Received</th>
+            <th>Any other details</th>
+          </tr>
+        </thead>
+        <tbody id="rpc">
+
+        </tbody>
+      </table>
+
+      <h3>Number of Journals: </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Name of the Author(s)</th>
+            <th>Title of the paper</th>
+            <th>Name of the Journal</th>
+            <th>Link to access Publication</th>
+          </tr>
+        </thead>
+        <tbody id="nj">
+
+        </tbody>
+      </table>
+
+      <h3>Number of Conferences: </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Name of the Author(s)</th>
+            <th>Title of the paper</th>
+            <th>Details of Conference</th>
+            <th>Link to access Publication</th>
+          </tr>
+        </thead>
+        <tbody id="nc">
+
+        </tbody>
+      </table>
+
+      <h3>Number of Books/ Book Chapters: </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Authors</th>
+            <th>Title of the Book</th>
+            <th>Name of the Publisher</th>
+            <th>other details</th>
+            <th>Link to access Publication</th>
+          </tr>
+        </thead>
+        <tbody id="nb">
+
+        </tbody>
+      </table>
+
+      <h3>Number of patents: </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Authors</th>
+            <th>Title</th>
+            <th>Application Number</th>
+            <th>Link to access details</th>
+          </tr>
+        </thead>
+        <tbody id="np">
+
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+
+    <div style="margin: 0 auto; width: 90%;">
+      <h3> Extension & Community Oriented Activities </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Name of the Extension</th>
+            <th>Date</th>
+            <th>Target Audience</th>
+            <th>Any other details</th>
+          </tr>
+        </thead>
+        <tbody id="ecoa">
+
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+
+    <div style="margin: 0 auto; width: 90%;">
+      <h3> Awards & Recognitions </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Title of the Award</th>
+            <th>State/ National/ International</th>
+            <th>Organization</th>
+            <th>Date of Award</th>
+            <th>Any other details</th>
+          </tr>
+        </thead>
+        <tbody id="ar">
+
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+
+    <div style="margin: 0 auto; width: 90%;">
+      <h3> Projects initiated or Completed </h3>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>Title of the project</th>
+            <th>State/ National/ International</th>
+            <th>Any other details</th>
+          </tr>
+        </thead>
+        <tbody id="pic">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    var myid = 1;
+    var mycount = -1;
+    $(document).ready(function () {
+      dispData(myid);
+    })
+
+    function dispData(myid) {
+      $.ajax({
+        url: "getData.php",
+        method: "GET",
+        data: { id: myid },
+        dataType: 'JSON',
+        success: function (response) {
+          console.log(response);
+
+          mycount = response.count;
+          $('td').remove();
+
+          $('#clg_data').append('<tr><td>' + response.clgname + '</td><td>' + response.clgcode + '</td><td>' + response.district + '</td><td>' + response.ir + '</td><td>' + response.arg + '</td><td>' + response.ssp + '</td><td>' + response.aors + '</td></tr>');
+          $('#icsm').append('<tr><td>' + response.icsmtitle + '</td><td>' + response.icsmdate + '</td><td>' + response.icsmpurpose + '</td><td>' + response.icsmpart + '</td><td>' + response.icsmaod + '</td></tr>');
+          $('#two').append('<tr><td>' + response.twotitle + '</td><td>' + response.twodate + '</td><td>' + response.twopurpose + '</td><td>' + response.twopart + '</td><td>' + response.twoaod + '</td></tr>');
+          $('#cca').append('<tr><td>' + response.ccatitle + '</td><td>' + response.ccadate + '</td><td>' + response.ccapurpose + '</td><td>' + response.ccapart + '</td><td>' + response.ccaaod + '</td></tr>');
+          $('#ncc').append('<tr><td>' + response.ncctitle + '</td><td>' + response.nccdate + '</td><td>' + response.nccpurpose + '</td><td>' + response.nccpart + '</td><td>' + response.nccaod + '</td></tr>');
+          $('#nss').append('<tr><td>' + response.nsstitle + '</td><td>' + response.nssdate + '</td><td>' + response.nsspurpose + '</td><td>' + response.nsspart + '</td><td>' + response.nssaod + '</td></tr>');
+          $('#service').append('<tr><td>' + response.servicetitle + '</td><td>' + response.servicedate + '</td><td>' + response.servicepurpose + '</td><td>' + response.servicepart + '</td><td>' + response.serviceaod + '</td></tr>');
+          $('#srp').append('<tr><td>' + response.srptitle + '</td><td>' + response.srpdate + '</td><td>' + response.srpsponser + '</td><td>' + response.srpgr + '</td><td>' + response.srpaod + '</td></tr>');
+          $('#rpc').append('<tr><td>' + response.rpctitle + '</td><td>' + response.rpcdate + '</td><td>' + response.rpcsponser + '</td><td>' + response.rpcgr + '</td><td>' + response.rpcaod + '</td></tr>');
+          $('#nj').append('<tr><td>' + response.njauthor + '</td><td>' + response.njtitle + '</td><td>' + response.njname + '</td><td>' + response.njlap + '</td></tr>');
+          $('#nc').append('<tr><td>' + response.ncauthor + '</td><td>' + response.nctitle + '</td><td>' + response.ncdetails + '</td><td>' + response.nclap + '</td></tr>');
+          $('#nb').append('<tr><td>' + response.nbauthor + '</td><td>' + response.nbtitle + '</td><td>' + response.nbname + '</td><td>' + response.nbdetails + '</td><td>' + response.nblap + '</td></tr>');
+          $('#np').append('<tr><td>' + response.npauthor + '</td><td>' + response.nptitle + '</td><td>' + response.npapplication + '</td><td>' + response.nplap + '</td></tr>');
+          $('#ecoa').append('<tr><td>' + response.ecoatitle + '</td><td>' + response.ecoadate + '</td><td>' + response.ecoapart + '</td><td>' + response.ecoaaod + '</td></tr>');
+          $('#ar').append('<tr><td>' + response.artitle + '</td><td>' + response.arsni + '</td><td>' + response.arorg + '</td><td>' + response.ardate + '</td><td>' + response.araod + '</td></tr>');
+          $('#pic').append('<tr><td>' + response.pictitle + '</td><td>' + response.picsni + '</td><td>' + response.picaod + '</td></tr>');
+        },
+        error: function (e) {
+          alert("Something went wrong")
+        }
+      });
+    }
+
+    $('#next_btn').click(function () {
+      if (myid < mycount) {
+        myid = myid + 1;
+        dispData(myid)
+      } else {
+        alert("End of Page");
+      }
+    });
+
+    $('#prev_btn').click(function () {
+      if (myid <= 1) {
+        alert("Cannot go back to previous")
+      } else {
+        myid = myid - 1;
+        dispData(myid);
+      }
+    });
+  </script>
+</body>
+
+</html>
