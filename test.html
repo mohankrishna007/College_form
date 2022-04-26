@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form accept-charset="UTF-8" action="store.php" method="POST" enctype="multipart/form-data" target="_blank" id="myform">
+            <div class="form-group">
+                <label for="TWO">Training & Workshops Organized</label> <br>
+                <div class="wrapper_TWO">
+                    <div style="margin-left: 20px" id="TWO">
+                        <b> Title of the Training Program / Workshop/ FDP </b>
+                        <textarea form="myform" name="two_title[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Date </b>
+                        <input type="date" name="two_date[]" id="" form="myform" style="width: 100%;">
+                        <b> Purpose </b>
+                        <textarea form="myform" name="two_purpose[]" rows="2" style="width: 100%;"></textarea>
+                        <b> Target Audience </b>
+                        <textarea form="myform" name="two_part" rows="2" style="width: 100%;"></textarea>
+                        <b> Any other Details </b>
+                        <textarea form="myform" name="two_aod" rows="2" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="addFields('TWO')" style="float: right">&#43</button>
+            </div>
+            <div class="form-group">
+                <label for="CCA">Co-curricular Activities</label> <br>
+                <div class="wrapper_CCA">
+                    <div style="margin-left: 20px" id="CCA">
+                        <b> Title of the Activity </b><textarea form="myform" name="ccatitle" rows="2" style="width: 100%;"></textarea>
+                        <b> Date </b><textarea form="myform" name="ccadate" rows="2" style="width: 100%;"></textarea>
+                        <b> Purpose </b><textarea form="myform" name="ccapurpose" rows="2" style="width: 100%;"></textarea>
+                        <b> Target Audience </b><textarea form="myform" name="ccapart" rows="2" style="width: 100%;"></textarea>
+                        <b> Any other Details </b><textarea form="myform" name="ccaaod" rows="2" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="addFields('CCA')" style="float: right">&#43</button>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function addFields(name) {
+            var wrapper = $('.wrapper_' + name);
+            var add_button = document.getElementsByClassName("add_field_button_"+name);
+            var clone = $("#"+name).clone().append('<a href="#" class="remove_field">Remove</a>');
+            var x = 1;
+            if (x == 1) {
+                wrapper.append(clone.clone());
+                x++;
+            }
+            $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+                e.preventDefault(); $(this).parent('div').remove(); x--;
+            })
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!--<script>-->
+<!--    let x = 0-->
+<!--    var wrapper;-->
+<!--    var clone;-->
+<!--    function addFields(name) {-->
+<!--        console.log(x)-->
+<!--        if(x == 0) {-->
+<!--            wrapper = $('.wrapper_'+name); //Input field wrapper-->
+<!--            console-->
+<!--            clone = $("."+name).clone().append('<a href="#" class="remove_field">Remove</a>');-->
+<!--            x++;-->
+<!--        }-->
+<!--        wrapper.append(clone.clone());-->
+<!--        //Once add button is clicked-->
+
+<!--        //Once remove button is clicked-->
+<!--        $(wrapper).on("click",".remove_field", function(e){ //user click on remove text-->
+<!--            e.preventDefault(); $(this).parent('div').remove(); x&#45;&#45;;-->
+<!--        })-->
+<!--    }-->
+<!--    $(document).ready(function(){-->
+
+<!--    });-->
+<!--</script>-->
